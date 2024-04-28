@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
   <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -14,7 +14,7 @@
 
 
 
-<title>Hello World 你好 | Hexo</title>
+<title>上海vlog | Hexo</title>
 
 
 
@@ -46,6 +46,8 @@
 
 
 
+
+    <script src='https://unpkg.com/valine@1.4.16/dist/Valine.min.js'></script>
 
 
 
@@ -85,18 +87,6 @@
               </li> 
                    
           
-            
-              <li class="menu-item">
-                <a href="/categories/gallery/">图库</a>
-              </li> 
-                   
-          
-            
-              <li class="menu-item">
-                <a href="/about/">关于</a>
-              </li> 
-                   
-          
           
         </ul>
       </nav>
@@ -118,12 +108,12 @@
         <div class="post-title">
             
             
-                Hello World 你好
+                上海vlog
             
             
         </div>
         <span class="post-date">
-            Apr 27, 2024
+            Apr 28, 2024
         </span>
     </div>
     <div class="post-img">
@@ -133,19 +123,17 @@
     </div>
 </div>
     <div class="post-content">
-    <p> [Welcome to PGreen World] </p>
-<h1 id="I’m-PGreen"><a href="#I’m-PGreen" class="headerlink" title="I’m PGreen"></a>I’m PGreen</h1><h5 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h5><h5 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=501829&auto=1&height=32"></iframe>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h5 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h4 id="光华楼"><a href="#光华楼" class="headerlink" title="光华楼"></a>光华楼</h4><img src="/2024/04/28/%E4%B8%8A%E6%B5%B7vlog/image2.jpg" class="" alt="光华楼">
+<p>打卡复旦大学，早有耳闻，当站在楼前草坪上，感觉不枉这一路的困难骑行。</p>
+<h4 id="交大慧谷"><a href="#交大慧谷" class="headerlink" title="交大慧谷"></a>交大慧谷</h4><img src="/2024/04/28/%E4%B8%8A%E6%B5%B7vlog/image4.jpg" class="" alt="交大慧谷">
+<p>打卡上海交大，也有所听闻慧谷，不过当面见了依然没什么感触。</p>
+<h4 id="香港肥锅港式米线"><a href="#香港肥锅港式米线" class="headerlink" title="香港肥锅港式米线"></a>香港肥锅港式米线</h4><img src="/2024/04/28/%E4%B8%8A%E6%B5%B7vlog/image3.jpg" class="" alt="米线">
+<p>打卡同济大学，里面的宿舍十分惬意，西北宿舍（。。？不确定具体哪个宿舍，选址在一片小树林中。还有校门口的这家米线偏贵</p>
+<h4 id="外滩"><a href="#外滩" class="headerlink" title="外滩"></a>外滩</h4><img src="/2024/04/28/%E4%B8%8A%E6%B5%B7vlog/image1.jpg" class="" alt="外滩">
+<p>印象深刻的是旁边PICC，灯火通明。</p>
+<p>这一次短暂的上海旅行，让我的朋友-鬼子哥花了2k，原因是他在上出租车时，把口袋的airpods掏掉在了大马路上，写此予以回忆。</p>
 
 </div> 
 
@@ -167,6 +155,24 @@
     
       <div class="post-comment">
 
+    
+        <div id="vcomments"></div>
+        <script>
+            var META = ['nick', 'mail', 'link'];
+            var meta = '';
+            meta = meta.split(',').filter(item => {
+                return META.includes(item);
+            });
+            new Valine({
+                el: '#vcomments',
+                appId: 'ILY1cMq749FRtoQ2ORWqWtvx-gzGzoHsz',
+                appKey: 'u52L0T3mGfdVrDDFCJ9SZcI5',
+                lang: 'cn',
+                placeholder: '请输入你的留言',
+                avatar: 'mm',
+                meta: meta
+            })
+        </script>    
      
 
      
@@ -184,11 +190,11 @@
     <div class="flex-container">
         <div class="footer-text">
             
-                联系方式
+                
                 <br>
             
             
-                ©RUI | 
+                ©2024 | 
             
             
                 Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
