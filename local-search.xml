@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>欢迎来到 2p2z 的小站</title>
+    <link href="/2026/09/15/hello-world/"/>
+    <url>/2026/09/15/hello-world/</url>
+    
+    <content type="html"><![CDATA[<h1 id="你好，世界"><a href="#你好，世界" class="headerlink" title="你好，世界"></a>你好，世界</h1><p>这是使用 <strong>Hexo 7</strong> + <strong>Fluid 主题</strong> 搭建的全新博客的第一篇文章。</p><h2 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><ul><li><input checked="" disabled="" type="checkbox"> 切换主题：从默认 <code>landscape</code> → <code>fluid</code></li><li><input checked="" disabled="" type="checkbox"> 中文界面 + 暗色模式</li><li><input checked="" disabled="" type="checkbox"> 本地搜索已开启</li><li><input disabled="" type="checkbox"> 评论系统（待配置）</li></ul><h2 id="即将支持"><a href="#即将支持" class="headerlink" title="即将支持"></a>即将支持</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 配置 Twikoo 评论（示意）</span><br><span class="hljs-keyword">const</span> twikoo = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Twikoo</span>(&#123;<br>  <span class="hljs-attr">el</span>: <span class="hljs-string">&#x27;#tcomment&#x27;</span>,<br>  <span class="hljs-attr">envId</span>: <span class="hljs-string">&#x27;https://your-twikoo.vercel.app&#x27;</span>,<br>  <span class="hljs-attr">region</span>: <span class="hljs-string">&#x27;ap-shanghai&#x27;</span>,<br>&#125;);<br></code></pre></td></tr></table></figure><blockquote><p>接下来的计划：接入评论系统、配置 RSS 订阅、添加关于页 &#x2F; 友链页。</p></blockquote><p>欢迎留言交流。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>博客搭建</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Fluid</tag>
+      
+      <tag>博客</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
