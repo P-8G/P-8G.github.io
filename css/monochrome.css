@@ -1,0 +1,315 @@
+/* ==========================================================================
+   纯黑白视觉层 Monochrome
+   在 Fluid 主题默认样式之后加载，只做覆盖，不改主题源码。
+   规则：只使用 #000 / #fff 与黑色透明度，无任何背景图。
+   ========================================================================== */
+
+:root {
+    --mono-fg: #000000;
+    --mono-bg: #ffffff;
+    --mono-muted: rgba(0, 0, 0, 0.6);
+    --mono-line: rgba(0, 0, 0, 0.12);
+    --mono-fill: rgba(0, 0, 0, 0.06);
+}
+
+[data-user-color-scheme="dark"] {
+    --mono-fg: #ffffff;
+    --mono-bg: #000000;
+    --mono-muted: rgba(255, 255, 255, 0.62);
+    --mono-line: rgba(255, 255, 255, 0.16);
+    --mono-fill: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- 1. 移除所有背景图 ---------- */
+html,
+body,
+#banner,
+.banner,
+#banner .full-bg-img,
+#banner .mask,
+.header-inner,
+#navbar,
+.navbar,
+.navbar-toggler-icon {
+    background-image: none !important;
+    background-repeat: no-repeat;
+}
+
+#banner {
+    background-color: var(--mono-bg) !important;
+}
+
+#banner .mask,
+#banner .full-bg-img {
+    background-color: transparent !important;
+}
+
+/* 首页已去除签名 banner，header 不再需要最小高度；
+   非首页（归档/分类/标签/文章）保留 banner，由主题默认高度控制 */
+.header-inner {
+    border-bottom: 1px solid var(--mono-line);
+}
+
+/* ---------- 2. 导航栏：纯色 + 细线，无模糊无阴影 ---------- */
+#navbar,
+#navbar.top-nav-collapse,
+#navbar.scrolling-navbar {
+    background-color: var(--mono-bg) !important;
+    box-shadow: none !important;
+    border-bottom: none;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+#navbar .navbar-brand,
+#navbar .navbar-brand:hover,
+#navbar .nav-link,
+#navbar .nav-link:hover,
+#navbar .iconfont,
+#navbar .navbar-toggler,
+#navbar .navbar-toggler i {
+    color: var(--mono-fg) !important;
+}
+
+#navbar .nav-link.active {
+    color: var(--mono-fg) !important;
+    text-decoration: underline;
+    text-underline-offset: 0.35rem;
+    text-decoration-thickness: 2px;
+}
+
+.navbar-toggler {
+    border-color: var(--mono-line) !important;
+}
+
+/* ---------- 3. 扁平化：去阴影、去圆角 ---------- */
+#board,
+#board-ctn,
+.index-card,
+.post-content,
+.page-content,
+.toc-card,
+.modal-content,
+.search-form,
+#local-search-result li,
+.navbar-toggler {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+#board {
+    background: var(--mono-bg) !important;
+}
+
+.index-card {
+    border-bottom: 1px solid var(--mono-line);
+}
+
+/* ---------- 4. 链接：下划线代替彩色 ---------- */
+.markdown-body a,
+.page-content a,
+.post-content a,
+#board a:not(.navbar-brand) {
+    color: var(--mono-fg) !important;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25rem;
+}
+
+.markdown-body a:hover,
+.page-content a:hover,
+.post-content a:hover {
+    text-decoration-thickness: 2px;
+}
+
+/* 首页摘要整段是链接，去掉下划线避免满屏横线 */
+#board a.index-excerpt,
+.index-excerpt,
+.index-excerpt a {
+    text-decoration: none !important;
+}
+
+/* 标签、分类、日期等小链接不加下划线 */
+#board .post-metas a,
+#board .post-meta a,
+#board a.tag,
+#board .post-tags a,
+#board .post-categories a {
+    text-decoration: none !important;
+}
+
+/* ---------- 5. 代码块：黑底白字 + 灰度高亮 ---------- */
+.markdown-body :not(pre) > code,
+.markdown-body p > code {
+    background: var(--mono-fill) !important;
+    color: var(--mono-fg) !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+figure.highlight,
+.highlight,
+.highlight pre,
+.markdown-body pre {
+    border-radius: 0 !important;
+    border: 1px solid var(--mono-line);
+}
+
+/* highlightjs 的彩色主题统一降为灰度 */
+.highlight,
+.highlight .chroma {
+    filter: grayscale(100%);
+}
+
+/* ---------- 6. 正文图片去色，保持整站无色相 ---------- */
+.markdown-body img,
+#board img {
+    filter: grayscale(100%);
+}
+
+/* ---------- 7. 元信息文字层次 ---------- */
+.post-meta,
+.post-metas,
+.index-btm,
+.footer-inner,
+.footer-content,
+#board .post-meta,
+.toc-header,
+.archive-meta,
+.category-post-count {
+    color: var(--mono-muted) !important;
+}
+
+/* ---------- 8. 按钮、分页、标签：边框代替填色 ---------- */
+.page-link,
+.btn,
+.prev-post,
+.next-post {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.page-link,
+.pagination .page-link {
+    color: var(--mono-fg) !important;
+    background: var(--mono-bg) !important;
+    border: 1px solid var(--mono-line) !important;
+}
+
+.pagination .active .page-link,
+.page-link:hover {
+    color: var(--mono-bg) !important;
+    background: var(--mono-fg) !important;
+    border-color: var(--mono-fg) !important;
+}
+
+a.tag,
+.post-tags a,
+.post-categories a,
+.category-list a {
+    color: var(--mono-fg) !important;
+    background: transparent !important;
+    border: 1px solid var(--mono-line);
+    border-radius: 0;
+}
+
+a.tag:hover,
+.post-tags a:hover {
+    background: var(--mono-fg) !important;
+    color: var(--mono-bg) !important;
+}
+
+/* ---------- 9. 进度条、回顶按钮适配暗色 ---------- */
+[data-user-color-scheme="dark"] #nprogress .bar {
+    background: var(--mono-fg) !important;
+}
+
+[data-user-color-scheme="dark"] #nprogress .peg {
+    box-shadow: 0 0 10px var(--mono-fg), 0 0 5px var(--mono-fg) !important;
+}
+
+#scroll-top-button {
+    border-radius: 0 !important;
+    background: var(--mono-fg) !important;
+    color: var(--mono-bg) !important;
+    box-shadow: none !important;
+}
+
+#scroll-top-button i,
+#scroll-top-button:hover i {
+    color: var(--mono-bg) !important;
+}
+
+/* ---------- 10. 页脚细线 ---------- */
+footer {
+    border-top: 1px solid var(--mono-line);
+}
+
+footer a {
+    color: var(--mono-fg) !important;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+/* ---------- 11. 交互细节 ---------- */
+::selection {
+    background: var(--mono-fg);
+    color: var(--mono-bg);
+}
+
+a:focus-visible,
+button:focus-visible,
+.page-link:focus-visible {
+    outline: 2px solid var(--mono-fg);
+    outline-offset: 2px;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--mono-fill);
+    border-radius: 0;
+}
+
+/* ---------- 12. 首页：隐藏签名 banner，文章列表直接展示 ---------- */
+body.is-home .header-inner {
+    height: auto !important;
+    min-height: 0 !important;
+    border-bottom: none;
+}
+
+body.is-home #banner {
+    display: none !important;
+}
+
+body.is-home #board {
+    margin-top: 0;
+    padding-top: 5rem; /* 为 fixed 导航栏留出空间 */
+}
+
+/* ---------- 13. 小屏 ---------- */
+@media (max-width: 768px) {
+    .header-inner {
+        min-height: 132px;
+    }
+
+    #banner .banner-text .h2 {
+        font-size: 24px;
+        padding: 0 1rem;
+    }
+
+    #board {
+        margin-top: -24px;
+    }
+
+    body.is-home .header-inner {
+        min-height: 0 !important;
+    }
+
+    body.is-home #board {
+        margin-top: 0;
+        padding-top: 4rem;
+    }
+}
